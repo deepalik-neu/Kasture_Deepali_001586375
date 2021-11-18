@@ -61,16 +61,30 @@ public class DB4OUtil {
     }
     
     public EcoSystem retrieveSystem(){
+        
         ObjectContainer conn = createConnection();
-        ObjectSet<EcoSystem> systems = conn.query(EcoSystem.class); // Change to the object you want to save
-        EcoSystem system;
-        if (systems.size() == 0){
-            system = ConfigureASystem.configure();  // If there's no System in the record, create a new one
+        try
+        {
+            System.out.println("Inside Try");
+            ObjectSet<EcoSystem> systems = conn.query(EcoSystem.class);
+            //ObjectSet<EcoSystem> systems = conn.query(EcoSystem.class); // Change to the object you want to save
+            System.out.println("New System");
+            EcoSystem system;
+            if (systems.size() == 0){
+                system = ConfigureASystem.configure();  // If there's no System in the record, create a new one
+                System.out.println("System Created");
+            }
+            else{
+                System.out.println("Inside Else");
+                system = systems.get(systems.size() - 1);
+            }
+            conn.close();
+            return system;
         }
-        else{
-            system = systems.get(systems.size() - 1);
+        catch(Exception ex)
+        {
+            System.out.println("Error : " + ex.toString());
         }
-        conn.close();
-        return system;
+        return null;
     }
 }
