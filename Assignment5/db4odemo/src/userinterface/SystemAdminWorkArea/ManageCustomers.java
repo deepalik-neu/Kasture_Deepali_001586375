@@ -71,10 +71,10 @@ public class ManageCustomers extends javax.swing.JPanel {
         txtName = new javax.swing.JTextField();
         txtUserName = new javax.swing.JTextField();
         txtPassword = new javax.swing.JTextField();
-        btnUpdate = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
-        btnSave = new javax.swing.JButton();
-        btnCreateCustomer = new javax.swing.JButton();
+        btnUpdateCustomer = new javax.swing.JButton();
+        btnDeleteCustomer = new javax.swing.JButton();
+        btnSaveCustomer = new javax.swing.JButton();
+        btnAddCustomer = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 102, 102));
@@ -95,39 +95,39 @@ public class ManageCustomers extends javax.swing.JPanel {
 
         jLabel3.setText("Password:");
 
-        btnUpdate.setBackground(new java.awt.Color(0, 0, 0));
-        btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
-        btnUpdate.setText("Update");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdateCustomer.setBackground(new java.awt.Color(0, 0, 0));
+        btnUpdateCustomer.setForeground(new java.awt.Color(255, 255, 255));
+        btnUpdateCustomer.setText("Update");
+        btnUpdateCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
+                btnUpdateCustomerActionPerformed(evt);
             }
         });
 
-        btnDelete.setBackground(new java.awt.Color(0, 0, 0));
-        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
-        btnDelete.setText("Delete");
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+        btnDeleteCustomer.setBackground(new java.awt.Color(0, 0, 0));
+        btnDeleteCustomer.setForeground(new java.awt.Color(255, 255, 255));
+        btnDeleteCustomer.setText("Delete");
+        btnDeleteCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
+                btnDeleteCustomerActionPerformed(evt);
             }
         });
 
-        btnSave.setBackground(new java.awt.Color(0, 0, 0));
-        btnSave.setForeground(new java.awt.Color(255, 255, 255));
-        btnSave.setText("Save");
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
+        btnSaveCustomer.setBackground(new java.awt.Color(0, 0, 0));
+        btnSaveCustomer.setForeground(new java.awt.Color(255, 255, 255));
+        btnSaveCustomer.setText("Save");
+        btnSaveCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
+                btnSaveCustomerActionPerformed(evt);
             }
         });
 
-        btnCreateCustomer.setBackground(new java.awt.Color(0, 0, 0));
-        btnCreateCustomer.setForeground(new java.awt.Color(255, 255, 255));
-        btnCreateCustomer.setText("Create Cusomer");
-        btnCreateCustomer.addActionListener(new java.awt.event.ActionListener() {
+        btnAddCustomer.setBackground(new java.awt.Color(0, 0, 0));
+        btnAddCustomer.setForeground(new java.awt.Color(255, 255, 255));
+        btnAddCustomer.setText("Create Cusomer");
+        btnAddCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateCustomerActionPerformed(evt);
+                btnAddCustomerActionPerformed(evt);
             }
         });
 
@@ -165,14 +165,14 @@ public class ManageCustomers extends javax.swing.JPanel {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(45, 45, 45)
-                                .addComponent(btnUpdate)
+                                .addComponent(btnUpdateCustomer)
                                 .addGap(56, 56, 56)
-                                .addComponent(btnDelete)
+                                .addComponent(btnDeleteCustomer)
                                 .addGap(76, 76, 76)
-                                .addComponent(btnSave))
+                                .addComponent(btnSaveCustomer))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(203, 203, 203)
-                                .addComponent(btnCreateCustomer)))))
+                                .addComponent(btnAddCustomer)))))
                 .addContainerGap(116, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -196,19 +196,19 @@ public class ManageCustomers extends javax.swing.JPanel {
                     .addComponent(jLabel3)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnCreateCustomer)
+                .addComponent(btnAddCustomer)
                 .addGap(29, 29, 29)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdate)
-                    .addComponent(btnDelete)
-                    .addComponent(btnSave))
+                    .addComponent(btnUpdateCustomer)
+                    .addComponent(btnDeleteCustomer)
+                    .addComponent(btnSaveCustomer))
                 .addContainerGap(89, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCreateCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateCustomerActionPerformed
+    private void btnAddCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCustomerActionPerformed
         // TODO add your handling code here:
         if(ecosystem.getUserAccountDirectory().checkIfUsernameIsUnique(txtUserName.getText())){
             UserAccount userAccount = ecosystem.getUserAccountDirectory().createUserAccount(txtName.getText(), txtUserName.getText(), txtPassword.getText(), null, new CustomerRole());
@@ -224,9 +224,9 @@ public class ManageCustomers extends javax.swing.JPanel {
         }
         
        
-    }//GEN-LAST:event_btnCreateCustomerActionPerformed
+    }//GEN-LAST:event_btnAddCustomerActionPerformed
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private void btnUpdateCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateCustomerActionPerformed
         // TODO add your handling code here:
         int selectRow = tblCustomers.getSelectedRow();
 
@@ -248,9 +248,9 @@ public class ManageCustomers extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Please select a row to update a profile");
         }
         
-    }//GEN-LAST:event_btnUpdateActionPerformed
+    }//GEN-LAST:event_btnUpdateCustomerActionPerformed
 
-    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+    private void btnSaveCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveCustomerActionPerformed
         // TODO add your handling code here:
         ecosystem.getUserAccountDirectory().updateUserAccount(user, txtName.getText(), txtUserName.getText(), txtPassword.getText());
         populateCustomerTable();
@@ -258,9 +258,9 @@ public class ManageCustomers extends javax.swing.JPanel {
             txtName.setText("");
             txtUserName.setText("");
             txtPassword.setText("");
-    }//GEN-LAST:event_btnSaveActionPerformed
+    }//GEN-LAST:event_btnSaveCustomerActionPerformed
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+    private void btnDeleteCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteCustomerActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblCustomers.getSelectedRow();
         if(selectedRow>=0){
@@ -280,7 +280,7 @@ public class ManageCustomers extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please select a row to delete the account");
         }
         
-    }//GEN-LAST:event_btnDeleteActionPerformed
+    }//GEN-LAST:event_btnDeleteCustomerActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -291,11 +291,11 @@ public class ManageCustomers extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddCustomer;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnCreateCustomer;
-    private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnSave;
-    private javax.swing.JButton btnUpdate;
+    private javax.swing.JButton btnDeleteCustomer;
+    private javax.swing.JButton btnSaveCustomer;
+    private javax.swing.JButton btnUpdateCustomer;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

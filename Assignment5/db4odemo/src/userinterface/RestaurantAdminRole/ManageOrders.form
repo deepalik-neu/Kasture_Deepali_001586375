@@ -28,11 +28,11 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-              <Component id="btnViewOrder" min="-2" max="-2" attributes="0"/>
+              <Component id="btnViewOrderList" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-              <Component id="btnAssignDeliveryMan" min="-2" max="-2" attributes="0"/>
+              <Component id="btnAssignDeliveryPerson" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="btnRefresh" min="-2" max="-2" attributes="0"/>
+              <Component id="btnRefreshOrders" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
@@ -51,9 +51,9 @@
               <Component id="jScrollPane1" min="-2" pref="165" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnAssignDeliveryMan" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnViewOrder" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnRefresh" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAssignDeliveryPerson" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnViewOrderList" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnRefreshOrders" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="152" max="32767" attributes="0"/>
           </Group>
@@ -129,7 +129,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnAssignDeliveryMan">
+    <Component class="javax.swing.JButton" name="btnAssignDeliveryPerson">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -140,10 +140,10 @@
         <Property name="text" type="java.lang.String" value="Assign Delivery Man to Order"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAssignDeliveryManActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAssignDeliveryPersonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnViewOrder">
+    <Component class="javax.swing.JButton" name="btnViewOrderList">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -154,10 +154,10 @@
         <Property name="text" type="java.lang.String" value="View Order"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewOrderActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewOrderListActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnRefresh">
+    <Component class="javax.swing.JButton" name="btnRefreshOrders">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -168,7 +168,7 @@
         <Property name="text" type="java.lang.String" value="Refresh"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRefreshActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRefreshOrdersActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
